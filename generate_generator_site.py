@@ -453,7 +453,7 @@ GEN_PRESETS = [
     {"slug": "suburban-home-essentials-only-furnace-fridge-wifi-calculator", "name": "Suburban Home Essentials Only (Gas Furnace + Refrigerator + Wi-Fi + Lights)", "run_w": 3200, "ac_ton": 0.0, "well_pump": False, "fuel_pref": "gas", "desc": "Calculate why a quiet 4,500W–6,500W inverter generator powers all winter survival essentials (furnace blower, freezer, sump pump, router) on 3.5 gallons/day."},
     {"slug": "interlock-kit-vs-transfer-switch-generator-breaker-calculator", "name": "Generator Interlock Kit vs. Manual Transfer Switch Sizing Calculator", "run_w": 7800, "ac_ton": 3.0, "well_pump": True, "fuel_pref": "dual", "desc": "Calculate backfeed breaker sizing (30A or 50A 2-pole breaker) for a Square D, Siemens, or Eaton panel interlock kit vs a 10-circuit Reliance transfer switch."},
     {"slug": "5-ton-dual-ac-large-home-standby-generator-calculator", "name": "Dual Central AC Home (Two 3-Ton or 4-Ton AC Compressors — 24kW Standby)", "run_w": 13500, "ac_ton": 6.0, "well_pump": True, "fuel_pref": "lp", "desc": "Running two central air conditioners during a storm requires smart load shedding modules or a 24kW–26kW Generac Guardian standby generator on liquid propane."},
-    {"slug": "inverter-generator-clean-power-thd-electronics-calculator", "name": "Clean Power Total Harmonic Distortion (THD < 3%) Inverter Calculator", "run_w": 5500, "ac_ton": 1.5, "well_prop": False, "fuel_pref": "dual", "desc": "Standard open-frame generators produce 15%–25% THD dirty power that damages variable-speed furnace blowers and OLED TVs! Calculate clean inverter sizing."}
+    {"slug": "inverter-generator-clean-power-thd-electronics-calculator", "name": "Clean Power Total Harmonic Distortion (THD < 3%) Inverter Calculator", "run_w": 5500, "ac_ton": 1.5, "well_pump": False, "fuel_pref": "dual", "desc": "Standard open-frame generators produce 15%–25% THD dirty power that damages variable-speed furnace blowers and OLED TVs! Calculate clean inverter sizing."}
 ]
 
 def get_dynamic_wattage_pages():
@@ -1536,7 +1536,7 @@ def main():
         "name": "2,500 Sq.Ft Home w/ 3.5-Ton Central AC & Well Pump (12,000W / 50A Service)",
         "run_w": 7200,
         "ac_ton": 3.5,
-        "well_pump": True,
+        "well_pump": True,  # <--- SUDAH DIPERBAIKI DARI well_prop
         "fuel_pref": "dual",
         "desc": "Calculate exact generator running watts, locked-rotor AC surge starting watts, 30A/50A/200A transfer switch sizing, propane fuel runtime, and 6/4 AWG cord requirements—plus read 3 new emergency power reviews added daily."
     }
